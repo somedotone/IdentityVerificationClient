@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'eclipse'
+}
+
+dependencies {
+	implementation fileTree(dir: 'lib', include: '*.jar')
+}
+
+repositories {
+    jcenter()
+}
+
+distributions {
+    main {
+        contents {
+        	baseName = 'Identity Verification Message Creator'
+        	into ('lib') {
+        		from 'lib/'
+      		}
+        }
+    }
+}
+
+
+
+mainClassName = 'gui.Gui'
