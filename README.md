@@ -9,11 +9,11 @@ client tool to interact with the IdentityVerification contract
 
 #### Linux / MacOS
 
-4.1 Run the script
+4.1 Run the **ardor-identity-verification-message-creator** script
 
 #### Windows
 
-4.2 Run the file as administrator
+4.2 Run the **ardor-identity-verification-message-creator.bat** file as administrator
 
 ## Building
 
