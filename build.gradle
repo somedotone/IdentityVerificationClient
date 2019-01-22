@@ -4,18 +4,23 @@ plugins {
     id 'eclipse'
 }
 
-dependencies {
-	implementation fileTree(dir: 'lib', include: '*.jar')
-}
 
 repositories {
     jcenter()
+    maven { url 'https://jitpack.io' }
 }
+
+
+dependencies {
+	implementation fileTree(dir: 'lib', include: '*.jar')
+	compile 'com.github.Atzen2:textAreaWriter:v0.1.1'
+}
+
 
 distributions {
     main {
         contents {
-        	baseName = 'Identity Verification Message Creator'
+        	baseName = 'Identity Verification Client'
         	into ('lib') {
         		from 'lib/'
       		}
