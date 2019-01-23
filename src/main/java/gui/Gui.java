@@ -82,7 +82,7 @@ public class Gui {
 	 */
 	private void initialize() {
 		frmIdentityVerificationClient = new JFrame();
-		frmIdentityVerificationClient.setTitle("Identity Verification Client v0.9.1");
+		frmIdentityVerificationClient.setTitle("Identity Verification Client v0.9.2");
 		frmIdentityVerificationClient.setResizable(false);
 		frmIdentityVerificationClient.setBounds(100, 100, 520, 810);
 		frmIdentityVerificationClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -294,7 +294,8 @@ public class Gui {
 		tokenGeneration.add(passphraseLabel);
 		
 		passphraseField = new JPasswordField();
-		passphraseField.setToolTipText("using sending account passphrase if empty");
+		passphraseField.setEditable(false);
+		passphraseField.setToolTipText("disabled. Enabled when account decoupling is implemented");
 		sl_tokenGeneration.putConstraint(SpringLayout.WEST, passphraseField, 6, SpringLayout.EAST, passphraseLabel);
 		sl_tokenGeneration.putConstraint(SpringLayout.EAST, passphraseField, -10, SpringLayout.EAST, tokenGeneration);
 		sl_tokenGeneration.putConstraint(SpringLayout.NORTH, passphraseField, 10, SpringLayout.SOUTH, challengeTextResponseTextArea);

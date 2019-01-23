@@ -49,7 +49,7 @@ public class Constants {
 	 * TRANSACTION CONSTANTS
 	 *********************************************************************************/
 	
-	public static final long RESPONSE_TIMEOUT_SECONDS = 120;
+	public static final long RESPONSE_TIMEOUT_SECONDS = 180;
 	
 	
 	/**********************************************************************************
