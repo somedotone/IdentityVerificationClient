@@ -109,15 +109,15 @@ public class GuiLogic {
 	}
 	
 	private static String getPassphrase() {
-		String tokenPassphrase = new String(guiObjects.passphraseField.getPassword());
+		String tokenPassphrase = (new String(guiObjects.passphraseField.getPassword())).trim();
 		
-		if(tokenPassphrase != null && !tokenPassphrase.equals("")) {
-			return tokenPassphrase;
-		} else {
+		if(tokenPassphrase == null || tokenPassphrase.equals("")) {
 			infoWriter.writeLine("...verification account passphrase empty...");
 			infoWriter.writeLine("...using sending account passohrase...");
-			return new String(guiObjects.masterPassphraseField.getPassword());
+			return (new String(guiObjects.masterPassphraseField.getPassword())).trim();
 		}
+		
+		return tokenPassphrase;
 	}
 	
 	private static boolean checkTokenInputFields() {
@@ -180,7 +180,7 @@ public class GuiLogic {
 		params.amount = (double) guiObjects.amountSpinner.getValue();
 		params.fee = (double) guiObjects.feeSpinner.getValue();
 		params.recipient = guiObjects.recipientTextField.getText().trim();
-		params.passphrase = new String(guiObjects.masterPassphraseField.getPassword());
+		params.passphrase = (new String(guiObjects.masterPassphraseField.getPassword())).trim();
 		params.chain = 2;
 		params.message = getMessage(tabIdx);
 		params.isEncryptedMessage = guiObjects.encryptMessageCheckbox.isSelected();
@@ -326,7 +326,7 @@ public class GuiLogic {
 		}
 		
 		
-		String passphrase = new String(guiObjects.masterPassphraseField.getPassword());
+		String passphrase = (new String(guiObjects.masterPassphraseField.getPassword())).trim();
 		if(passphrase == null || passphrase.equals("")) {
 			infoWriter.writeEmptyLine();
 			infoWriter.writeLine(addTime() + messageError);
@@ -365,7 +365,7 @@ public class GuiLogic {
 		params.amount = (double) guiObjects.amountSpinner.getValue();
 		params.calculateFee = true;
 		params.recipient = guiObjects.recipientTextField.getText().trim();
-		params.passphrase = new String(guiObjects.masterPassphraseField.getPassword());
+		params.passphrase = (new String(guiObjects.masterPassphraseField.getPassword())).trim();
 		params.chain = 2;
 		params.message = getMessage(tabIndex);
 		params.isEncryptedMessage = guiObjects.encryptMessageCheckbox.isSelected();
