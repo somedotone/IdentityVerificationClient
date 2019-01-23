@@ -82,7 +82,7 @@ public class Gui {
 	 */
 	private void initialize() {
 		frmIdentityVerificationClient = new JFrame();
-		frmIdentityVerificationClient.setTitle("Identity Verification Client v0.9.0");
+		frmIdentityVerificationClient.setTitle("Identity Verification Client v0.9.1");
 		frmIdentityVerificationClient.setResizable(false);
 		frmIdentityVerificationClient.setBounds(100, 100, 520, 810);
 		frmIdentityVerificationClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
