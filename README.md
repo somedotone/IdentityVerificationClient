@@ -32,8 +32,8 @@ A Java Runtime Environment \(&gt;= Java 8\) must be installed
 
 This tool creates the message strings used to go through the verification process. You can use it in two ways.
 
-1. If you don't trust the tool, use it to just create the messages for you. Copy and paste the required messages into and from the tool and ardors official web interface \(if you don't run a full node, use [jeluridas](https://www.jelurida.com) official [testnet node](https://testardor.jelurida.com) or some.ones [testnet node](https://testardor.some.one)\). The messages transmitted by the contract runner can be found as \(encrypted\) attached messages inside a payment transaction. The messages transmitted by the user need to be included as \(encrypted\) attached messages, as well.
-2. If you trust the tool \(please validate the code and build it from source if you don't trust\), it can guide you through the whole verification process and handles the messaging and token creation for you. You can therefore use it as a stand alone tool without needing to switch to the web interface anymore.
+1. If you don't trust the tool, use it to just create the messages for you. Copy and paste the required messages into and from the tool and ardors official web interface (if you don't run a full node, use [jeluridas](https://www.jelurida.com) official [testnet node](https://testardor.jelurida.com) or some.ones [testnet node](https://testardor.some.one)). The messages transmitted by the contract runner can be found as (encrypted) attached messages inside a payment transaction. The messages transmitted by the user need to be included as (encrypted) attached messages, as well.
+2. If you trust the tool (validate the code and build it from source if you don't trust), it can guide you through the whole verification process and handles the messaging and token creation for you. You can therefore use it as a stand alone tool without needing to switch to the web interface anymore.
 
 It should be largely self descriptive if you've red the documentation from the [IdentityVerification](https://github.com/somedotone/IdentityVerification/wiki/How-To) contract.
 
