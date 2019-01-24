@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import config.Constants;
 import nxt.account.Account;
 import nxt.addons.JO;
 import nxt.blockchain.Chain;
@@ -92,7 +93,7 @@ public class TransactionHandler {
 				}
 			}
 		
-			TimeUnit.SECONDS.sleep(1);
+			TimeUnit.SECONDS.sleep(Constants.TRANSACTION_POLL_INTERVAL_SECONDS);
 			currentTime = getTimestampSeconds();
 		}
 		

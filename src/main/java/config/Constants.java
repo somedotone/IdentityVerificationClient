@@ -1,4 +1,5 @@
-package logic;
+package config;
+
 
 public class Constants {
 	private Constants() {}
@@ -50,6 +51,7 @@ public class Constants {
 	 *********************************************************************************/
 	
 	public static final long RESPONSE_TIMEOUT_SECONDS = 180;
+	public static final long TRANSACTION_POLL_INTERVAL_SECONDS = 5;
 	
 	
 	/**********************************************************************************
@@ -63,6 +65,8 @@ public class Constants {
 	 * GUI CONSTANTS
 	 *********************************************************************************/
 	
-	public static final int WAITING_SINGAL_UPDATE_TIME = 1; // seconds
-	public static final int WAITING_SINGAL_LENGTH = 30; // characters
+	public static final int WAITING_SIGNAL_UPDATE_TIME = 1; // seconds
+	public static final int WAITING_SIGNAL_LENGTH = 30; // characters
+	
+	public static final String TOOL_VERSION = "v0.9.3";
 }

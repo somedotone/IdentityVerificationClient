@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import logic.Constants;
+import config.Constants;
 import logic.Logic;
 import logic.SendMessageParams;
 import nxt.addons.JO;
@@ -194,7 +194,7 @@ public class GuiLogic {
 				counter = writeWaitingSignal(isFirstRun, counter);
 				if(isFirstRun) isFirstRun = false;
 				
-				try { TimeUnit.SECONDS.sleep(Constants.WAITING_SINGAL_UPDATE_TIME); } 
+				try { TimeUnit.SECONDS.sleep(Constants.WAITING_SIGNAL_UPDATE_TIME); } 
 				catch (InterruptedException e) { return; }
 			}
 		});
@@ -348,7 +348,7 @@ public class GuiLogic {
 	
 	private static int writeWaitingSignal(boolean isFirstRun, int counter) {		
 		String text = "";
-		counter = counter % Constants.WAITING_SINGAL_LENGTH;
+		counter = counter % Constants.WAITING_SIGNAL_LENGTH;
 		for (int i = 0; i <= counter; i++) text += ". ";
 
 		if(!isFirstRun) infoWriter.removeLine();

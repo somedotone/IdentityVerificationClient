@@ -1,6 +1,7 @@
 package logic;
 
 
+import config.Constants;
 import nxt.account.AccountPropertyTransactionType;
 import nxt.account.PaymentTransactionType;
 import nxt.account.Token;
@@ -189,22 +190,23 @@ public class Logic {
 	}
 	
 	private boolean isExpectedMessage(String messageType) {
-			String type = responsedMessage.getString(Constants.MESSAGE_TYPE_KEY);
-			if(type == null || type.equals("")) return false;
-			return type.equals(messageType);
+		String type = responsedMessage.getString(Constants.MESSAGE_TYPE_KEY);
+		if(type == null || type.equals("")) return false;
+		return type.equals(messageType);
 	}
 	
 	private boolean isErrorMessage() {
-			return responsedMessage.containsKey("errorDescription") && responsedMessage.containsKey("errorCode"); 
+		return responsedMessage.containsKey("errorDescription") && responsedMessage.containsKey("errorCode"); 
 	}
 	
 	private boolean isNotOverpaidError() {
-			return responsedMessage.getInt("errorCode") != Constants.ERROR_CODE_OVERPAID;
+		return responsedMessage.getInt("errorCode") != Constants.ERROR_CODE_OVERPAID;
 	}
 	
 	
 	public double calculateFee(SendMessageParams params) throws Exception {
-			return (new TransactionHandler()).calculateMinimumFee(params);
+		if(params.isEncryptedMessage) params.encryptedMessage = encryptMessage(params);
+		return (new TransactionHandler()).calculateMinimumFee(params);
 	}
 }
 

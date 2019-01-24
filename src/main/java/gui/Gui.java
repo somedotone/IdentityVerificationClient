@@ -21,6 +21,10 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
+import config.Constants;
+
+//import logic.Constants;
+
 public class Gui {
 
 	private JFrame frmIdentityVerificationClient;
@@ -82,7 +86,7 @@ public class Gui {
 	 */
 	private void initialize() {
 		frmIdentityVerificationClient = new JFrame();
-		frmIdentityVerificationClient.setTitle("Identity Verification Client v0.9.2");
+		frmIdentityVerificationClient.setTitle("Identity Verification Client " + Constants.TOOL_VERSION);
 		frmIdentityVerificationClient.setResizable(false);
 		frmIdentityVerificationClient.setBounds(100, 100, 520, 810);
 		frmIdentityVerificationClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
