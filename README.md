@@ -41,5 +41,5 @@ See [IdentityVerification wiki](https://github.com/somedotone/IdentityVerificati
 
 ## Misc
 
-This tool has been developed to develop the contract and is therefore not a really beautiful and \(end\) user friendly tool. It's some kind of development tool for the contract. A more user friendly \(web based\) client tool is planed in the near future. A competitor from the hackathon has [built](https://github.com/aajajim/identityVerifier) a really nice [frontend](https://aajajim.github.io/identityVerifier/sessions/login) to demonstrate the goal of the Identity Verification hackathon Challenge.
+This tool has been developed to develop the contract and is therefore not a really beautiful and \(end\) user friendly tool. It's some kind of development tool for the contract. Some thoughts for a more user friendly web based client can be found [here](https://github.com/somedotone/WebClient). It's inspired by a competitor from the hackathon who [built](https://github.com/aajajim/identityVerifier) a really nice [frontend](https://aajajim.github.io/identityVerifier/sessions/login) to demonstrate the goal of the Identity Verification hackathon Challenge.
 
