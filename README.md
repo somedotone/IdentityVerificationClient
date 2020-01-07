@@ -1,6 +1,6 @@
 # IdentityVerificationClient
 
-a (development) tool to interact with the [IdentityVerification](https://github.com/somedotone/IdentityVerification) contract.
+A (development) tool to interact with the [IdentityVerification](https://github.com/somedotone/IdentityVerification) contract.
 
 ## Installation
 
